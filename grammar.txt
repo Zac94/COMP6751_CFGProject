@@ -1,0 +1,94 @@
+S -> NP_Sing VP_Sing | NP_Plu VP_Plu | PP NP_Sing VP_Sing | PP NP_Plu VP_Plu | NP_Sing MD VP_Inf | NP_Plu MD VP_Inf | S CONJ S | CONJ S | S CONJ Comp S | Adv S
+S -> PP NP_Sing VP_Sing | PP NP_Plu VP_Plu | PP NP_Sing VP_Sing | PP NP_Plu VP_Plu
+S -> PP NP_Sing MD VP_Inf | PP NP_Plu MD VP_Inf | PP NP_Sing MD VP_Inf | PP NP_Plu MD VP_Inf
+S -> Aux NP_Sing VP_Sing | Aux NP_Plu VP_Plu | NP_Date Aux NP_Sing VP_Sing | NP_Date Aux NP_Plu VP_Plu
+S -> NP_Sing VP_Sing Adj | NP_Plu VP_Plu Adj | PP NP_Sing VP_Sing Adj | PP NP_Plu VP_Plu Adj | NP_Sing MD VP_Inf Adj | NP_Plu MD VP_Inf Adj
+S -> PP NP_Sing VP_Sing Adj | PP NP_Plu VP_Plu Adj | PP NP_Sing VP_Sing Adj | PP NP_Plu VP_Plu Adj 
+S -> PP NP_Sing MD VP_Inf Adj | PP NP_Plu MD VP_Inf Adj | PP NP_Sing MD VP_Inf Adj | PP NP_Plu MD VP_Inf Adj 
+S -> Aux NP_Sing VP_Sing Adj | Aux NP_Plu VP_Plu Adj | NP_Date Aux NP_Sing VP_Sing Adj | NP_Date Aux NP_Plu VP_Plu Adj
+S -> NP_Sing VP_Sing Adj NP | NP_Plu VP_Plu Adj NP | PP NP_Sing VP_Sing Adj NP | PP NP_Plu VP_Plu Adj NP | NP_Sing MD VP_Inf Adj NP | NP_Plu MD VP_Inf Adj NP
+S -> PP NP_Sing VP_Sing Adj NP | PP NP_Plu VP_Plu Adj NP | PP NP_Sing VP_Sing Adj NP | PP NP_Plu VP_Plu Adj NP
+S -> PP NP_Sing MD VP_Inf Adj NP | PP NP_Plu MD VP_Inf Adj NP | PP NP_Sing MD VP_Inf Adj NP | PP NP_Plu MD VP_Inf Adj NP
+S -> Aux NP_Sing VP_Sing Adj NP | Aux NP_Plu VP_Plu Adj NP | NP_Date Aux NP_Sing VP_Sing Adj NP | NP_Date Aux NP_Plu VP_Plu Adj NP
+S -> NP_Sing VP_Sing Adj PP | NP_Plu VP_Plu Adj PP | PP NP_Sing VP_Sing Adj PP | PP NP_Plu VP_Plu Adj PP | NP_Sing MD VP_Inf Adj PP | NP_Plu MD VP_Inf Adj PP
+S -> PP NP_Sing VP_Sing Adj PP | PP NP_Plu VP_Plu Adj PP | PP NP_Sing VP_Sing Adj PP | PP NP_Plu VP_Plu Adj PP
+S -> PP NP_Sing MD VP_Inf Adj PP | PP NP_Plu MD VP_Inf Adj PP | PP NP_Sing MD VP_Inf Adj PP | PP NP_Plu MD VP_Inf Adj PP
+S -> Aux NP_Sing VP_Sing Adj PP | Aux NP_Plu VP_Plu Adj PP | NP_Date Aux NP_Sing VP_Sing Adj PP | NP_Date Aux NP_Plu VP_Plu Adj PP
+S -> VP_Sing | VP_Plu | ADVTIME S
+ADVTIME -> Adj NTime | Adj NP_Date
+NP -> NP_Sing | NP_Plu | NP CONJ NP | NP_Date | NP_Time | ObjPronoun | ObjPronoun NP
+NP_Time -> NP_Time PP | NTime | Det_Sing NTime | Det_Plu NTime
+NP_Date -> Day | Month | Year | Day Month NumDay Year | Month Day | Day Month | Ord Month | Det_Sing Ord P Month | Det_Sing Ord P Month Year | Month Year
+NP_Sing -> Det_Sing Nominal_Sing | PropN | PropN PropN | Det_Sing Adj Nominal_Sing | Adj Nominal_Sing | Nominal_Sing | NP_Sing PP
+NP_Sing -> Det_Sing Nominal_Sing PropN | Pronoun_Sing | Det_Sing Adj Nominal_Sing PropN | Adj Nominal_Sing PropN | Nominal_Sing PropN | NP_Sing PP
+NP_Plu -> Det_Plu Nominal_Plu | Pronoun_Plu | Det_Plu Adj Nominal_Plu | Adj Nominal_Plu | Nominal_Plu | NP_Plu PP
+Nominal_Sing -> N_Sing | Nominal_Sing N_Sing | Nominal_Sing PP_Sing
+Nominal_Plu -> N_Plu | Nominal_Plu N_Plu | Nominal_Plu PP_Plu
+VP_Sing -> IV_Pres_Sing | IV_Pres_Sing PP | IV_Past | IV_Past PP | TV_Pres_Sing NP | TV_Pres_Sing NP PP | TV_Past NP | TV_Past NP PP | Adv IV_Pres_Sing | Adv IV_Past
+VP_Sing -> IV_Pres_Sing TO VP_Inf | IV_Past TO VP_Inf | Adv IV_Pres_Sing TO VP_Inf | Adv IV_Past TO VP_Inf 
+VP_Sing -> IV_Pres_Sing Adv | IV_Past Adv | TV_Pres_Sing NP Adv | TV_Pres_Sing NP Adv PP | TV_Past NP Adv | TV_Past NP Adv PP | IV_Pres_Sing Adv | IV_Past Adv
+VP_Sing -> IV_Pres_Sing TO VP_Inf Adv | IV_Past TO VP_Inf Adv | IV_Pres_Sing TO VP_Inf Adv | IV_Past TO VP_Inf Adv
+VP_Sing -> Adv TV_Pres_Sing NP | Adv TV_Pres_Sing NP PP | Adv TV_Past NP | Adv TV_Past NP PP | DatV_Pres_Sing NP PP | DatV_Past NP PP
+VP_Sing -> TV_Pres_Sing NP Adv | TV_Pres_Sing NP PP Adv | TV_Past NP Adv | TV_Past NP PP Adv
+VP_Sing -> SV_Pres_Sing S | SV_Past S | SV_Pres_Sing Comp S | SV_Past Comp S | SV_Pres_Sing NP Comp S | SV_Past NP Comp S
+VP_Plu -> IV_Pres_Plu | IV_Past_Plu | TV_Pres_Plu NP | TV_Pres_Plu NP PP | TV_Past NP | TV_Past NP PP | Adv IV_Pres_Plu | Adv IV_Past
+VP_Plu -> IV_Pres_Plu TO VP_Inf | IV_Past_Plu TO VP_Inf | Adv IV_Pres_Plu TO VP_Inf | Adv IV_Past TO VP_Inf 
+VP_Plu -> IV_Pres_Plu Adv | IV_Past_Plu Adv | TV_Pres_Plu NP Adv | TV_Pres_Plu NP Adv PP | TV_Past NP Adv | TV_Past NP Adv PP | IV_Pres_Plu Adv | IV_Past Adv
+VP_Plu -> IV_Pres_Plu TO VP_Inf Adv | IV_Past_Plu TO VP_Inf Adv | IV_Pres_Plu TO VP_Inf Adv | IV_Past TO VP_Inf Adv
+VP_Plu -> Adv TV_Pres_Plu NP | Adv TV_Pres_Plu NP PP | Adv TV_Past NP | Adv TV_Past NP PP | DatV_Pres_Plu NP PP | DatV_Past NP PP
+VP_Plu -> TV_Pres_Plu NP Adv | TV_Pres_Plu NP Adv PP | TV_Past NP Adv | TV_Past NP Adv PP
+VP_Plu -> SV_Pres_Plu S | SV_Past S | SV_Pres_Plu Comp S | SV_Past Comp S | SV_Pres_Plu NP Comp S | SV_Past NP Comp S
+VP_Inf -> IV_Inf | TV_Inf NP | TV_Inf NP PP | Adv IV_Inf | DatV_Inf NP PP | Adv IV_Inf | Adv TV_Inf NP | Adv TV_Inf NP PP
+VP_Inf -> IV_Inf TO VP_Inf | Adv IV_Inf TO VP_Inf | Adv IV_Inf TO VP_Inf 
+VP_Inf -> IV_Inf Adv | TV_Inf NP Adv | TV_Inf NP Adv PP | IV_Inf Adv | TV_Inf NP Adv | TV_Inf NP Adv PP
+VP_Inf -> IV_Inf TO VP_Inf Adv | IV_Inf TO VP_Inf Adv | IV_Inf PP
+VP_Inf -> SV_Inf S | SV_Inf Comp S | SV_Inf NP Comp S
+PP -> P NP | P
+N_Sing -> "apple" | "table" | "fridge" | "office" | "desk" | "replacement" | "refrigerator" | "colleague" | "treat" | "table" | "week"
+N_Plu -> "apples" | "tables" | "fridges" | "offices" | "desks" | "refrigerators" | "colleagues" | "treats" | "them" | "tables"
+NTime -> "yesterday" | "Yesterday" | "today" | "Today" | "Tomorrow" | "tomorrow" | "day" | "week" | "weeks" | "days"
+Day -> "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday"
+Month -> "January" | "February" | "March" | "April" | "May" | "June" | "July" | "August" | "September" | "October" | "November" | "December"
+Year -> "2000" | "2001" | "2002" | "2003" | "2004" | "2005" | "2006" | "2007" | "2008" | "2009" | "2010"
+Year -> "2011" | "2012" | "2013" | "2014" | "2015" | "2016" | "2017" | "2018" | "2019" | "2020" | "2021"
+NumDay -> "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+NumDay -> "10" | "11" | "12" | "13" | "14" | "15" | "16" | "17" | "18" | "19"
+NumDay -> "20" | "21" | "22" | "23" | "24" | "25" | "26" | "27" | "28" | "29"
+NumDay -> "30" | "31"
+ORD -> "1st" | "2nd" | "3rd" | "4th" | "5th" | "6th" | "7th" | "8th" | "9th" | "10th" | "11th" | "12th"
+ORD -> "13th" | "14th" | "15th" | "16th" | "17th" | "18th" | "19th" | "20th" | "21st" | "22nd" | "23rd"
+ORD -> "24th" | "25th" | "26th" | "27th" | "28th" | "29th" | "30th" | "31st"
+ORD -> "first" | "second" | "third" | "fourth" | "fifth" | "sixth" | "seventh" | "eighth" | "ninth" | "tenth"
+ORD -> "eleventh" | "twelfth" | "thirteenth" | "fourteenth" | "fifteenth" | "sixteenth" | "seventeenth" | "eighteenth"
+ORD -> "nineteenth" | "twentieth" | "twenty-first" | "twenty-second" | "twenty-third" | "twenty-fourth"
+ORD -> "twenty-fifth" | "twenty-sixth" | "twenty-seventh" | "twenty-eighth" | "twenty-ninth" | "thirtieth" | "thirty-first"
+Pronoun_Sing -> "it" | "he" | "she" | "I" | "you" | "last"
+Pronoun_Sing -> "It" | "He" | "She" | "You" | "Last"
+Pronoun_Plu -> "they" | "They"
+ObjPronoun -> "her" | "him" | "them" | "me" | "you" | "us" | "it"
+TV_Pres_Sing -> "eats" | "takes" | "puts" | "shares" | "promises" | "intends" | "promise" | "eat" | "take" | "put" | "share" | "promise" | "intend"
+TV_Pres_Plu -> "eat" | "take" | "put" | "share" | "promise" | "intend"
+TV_Past -> "ate" | "took" | "put" | "shared" | "promised" | "intended"
+TV_Inf -> "eat" | "take" | "put" | "delight" | "share" | "intend"
+IV_Pres_Sing -> "is" | "am" | "intends" | "eats"
+IV_Pres_Plu -> "are" | "intend" | "eat"
+IV_Past -> "were" | "was" | "intended" | "ate"
+IV_Inf -> "be" | "intend"
+DatV_Pres_Sing -> "takes"
+DatV_Pres_Plu -> "take"
+DatV_Past -> "took" | "promised"
+DatV_Inf -> "take"
+SV_Pres_Sing -> "promises" | "anticipates" | "says"
+SV_Pres_Plu -> "promise" | "anticipate" | "say"
+SV_Past -> "promised" | "anticipated" | "said"
+SV_Inf -> "promise" | "anticipate" | "say"
+PropN -> "John" | "Sue" | "O'Malley" | "Mary"
+MD -> "would" | "will" | "could" | "should" | "can" | "shall" | "must" | "may" | "might"
+Det_Sing -> "that" | "this" | "his" | "her" | "my" | "your" | "a" | "an" | "the" | "Last" | "last"
+Det_Plu -> "their" | "these" | "those" | "their" | "our" | "some" | "several" | "the" | "all"
+P -> "on" | "On" | "at" | "in" | "to" | "from" | "with" | "In" | "of" | "for"
+CONJ -> "and" | "or" | "But" | "but" | "however" | "But"
+Adj -> "crunchy" | "both" | "Last" | "last" | "fine" | "sick"
+Adv -> "finally" | "today" | "yesterday" | "tomorrow" | "Finally"
+Comp -> "that"
+TO -> "to" | "To"
